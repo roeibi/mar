@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מ.א.ר חוברת עבודה וירטואלית</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="answersus.js"></script>
+  <script src="answersct.js"></script>
+  <script src="answersmipuy.js"></script>
+
+</head>
+
+<body>
+  <div class="header">
+    <div><img src="images/logo.png" alt="logo" class="logo"></div>
+    <div class="text-header">מ.א.ר חוברת עבודה וירטואלית</div>
+  </div>
+  <div class="body-container">
+    <div class="main-menu">
+      <ul>
+        <li id="ZIHUY" onclick="onButtonClick(this)">זיהוי לקוח</li>
+        <li id="US" onclick="onButtonClick(this)">US</li>
+        <li id="CT" onclick="onButtonClick(this)">CT</li>
+        <li id="XRAY" onclick="onButtonClick(this)">רנטגן</li>
+        <li id="MIPUY" onclick="onButtonClick(this)">מיפויים</li>
+        <li id="MEMOGRAPH" onclick="onButtonClick(this)">ממוגרפיה ו US שדיים</li>
+        <li id="SPECIAL" onclick="onButtonClick(this)">בדיקות מיוחדות</li>
+        <li id="SLA" onclick="onButtonClick(this)">זמני פיענוח</li>
+        <li id="AGE" onclick="onButtonClick(this)">הגבלות גיל</li>
+        <li id="PHONES" onclick="onButtonClick(this)">שלוחות</li>
+      </ul>
+    </div>
+    <div class="sub-menu">
+      <ul class="us-class">
+        <li id="US1" onclick="onSubButtonClick(this)">כללית בסניפים רפאל, כבר סבא ונתניה</li>
+        <li id="US2" onclick="onSubButtonClick(this)">בטן וכליות דרכי השתן</li>
+        <li id="US3" onclick="onSubButtonClick(this)">מפשעות ואשכים</li>
+        <li id="US4" onclick="onSubButtonClick(this)">כף יד/ כף רגל</li>
+        <li id="US5" onclick="onSubButtonClick(this)">כתפיים</li>
+        <li id="US6" onclick="onSubButtonClick(this)">בלוטת תריס</li>
+        <li id="US7" onclick="onSubButtonClick(this)">דופלר ורידים גפיים</li>
+        <li id="US8" onclick="onSubButtonClick(this)">דופלר עורקי צוואר/קרוטיס/קרוטאיד</li>
+        <li id="US9" onclick="onSubButtonClick(this)">דופלר עורקי צוואר</li>
+        <li id="US10" onclick="onSubButtonClick(this)">עמוד שידרה תינוקות ומח</li>
+        <li id="US11" onclick="onSubButtonClick(this)">בטן עליונה, בטן תחתונה, כליות ודרכי השתן</li>
+        <li id="US12" onclick="onSubButtonClick(this)">רקמות רכות</li>
+        <li id="US13" onclick="onSubButtonClick(this)">דופלר ורידי ידיים</li>
+      </ul>
+    </div>
+    <div class="sub-menu">
+      <ul class="ct-class">
+        <li id="CT1" onclick="onSubButtonClick(this)">בטן</li>
+        <li id="CT2" onclick="onSubButtonClick(this)">ראש</li>
+        <li id="CT3" onclick="onSubButtonClick(this)">אנגיוגרפיה</li>
+        <li id="CT4" onclick="onSubButtonClick(this)">דרכי השתן / כליות</li>
+        <li id="CT5" onclick="onSubButtonClick(this)">בטן תלת פאזי לכבד</li>
+        <li id="CT6" onclick="onSubButtonClick(this)">חזה</li>
+        <li id="CT7" onclick="onSubButtonClick(this)">אוכף תורכי</li>
+        <li id="CT8" onclick="onSubButtonClick(this)">עצמות פנים / מערות פנים</li>
+        <li id="CT9" onclick="onSubButtonClick(this)">עווית כלייתית</li>
+        <li id="CT10" onclick="onSubButtonClick(this)">כליות בפרוטוקול אבנים / לחיפוש אבנים</li>
+        <li id="CT11" onclick="onSubButtonClick(this)">ריאות סקר</li>
+        <li id="CT12" onclick="onSubButtonClick(this)">קולונסקופיה וירטואלית</li>
+        <li id="CT13" onclick="onSubButtonClick(this)">ארובות עיניים</li>
+        <li id="CT14" onclick="onSubButtonClick(this)">אנגיו ללב / עורקים כליליים / עורקים קורונרים</li>
+      </ul>
+    </div>
+    <div class="sub-menu">
+      <ul class="xray-class">
+        <li id="XRAY1">XRAY1</li>
+      </ul>
+    </div>
+    <div class="sub-menu">
+      <ul class="mipuy-class">
+        <li id="MIPUY1" onclick="onSubButtonClick(this)">לב</li>
+        <li id="MIPUY2" onclick="onSubButtonClick(this)">עצמות</li>
+        <li id="MIPUY3" onclick="onSubButtonClick(this)">אחר</li>
+      </ul>
+    </div>
+    <div class="sub-menu">
+      <ul class="memograph-class">
+        <li id="MEMOGRAPH1">MEMOGRAPH1</li>
+      </ul>
+    </div>
+    <div class="sub-menu">
+      <ul class="phones-class">
+        <li id="PHONES1">PHONES1</li>
+      </ul>
+    </div>
+    <div id="answers" class="answers">פעולה נדרשת:</div><br><br>
+    <div id="dynamicAnswersContainer" class="answers-container"></div>
+    <div id="main" class="main">
+      <div class="card-container">
+        <div class="card">
+          <!-- <img src="img_avatar.png" alt="Avatar" style="width:100%"> can put img here -->
+          <div class="card-content">
+            <h4>ראש העין</h4>
+            <p>בתאריך 17/8</p>
+            <p>רנטגן בין 16:00-18:00</p>
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="img_avatar.png" alt="Avatar" style="width:100%"> can put img here -->
+          <div class="card-content">
+            <h4>?</h4>
+            <p>בתאריך: </p>
+            <p>?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function onButtonClick(button) {
+      var zihuyCheck = document.getElementById("zihuy-answer");
+      var xrayCheck = document.getElementById("xray-answer");
+      var memoCheck = document.getElementById("memograph-answer");
+      var phonesCheck = document.getElementById("phones-answer");
+      var specialCheck = document.getElementById("special-answer");
+      var slaCheck = document.getElementById("sla-answer");
+      var ageCheck = document.getElementById("age-answer");
+      if (button.id === 'US' && document.getElementsByClassName('us-class')[0].style.display === "table") {
+        toggleMainShow();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'CT' && document.getElementsByClassName('ct-class')[0].style.display === "table") {
+        toggleMainShow();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'MIPUY' && document.getElementsByClassName('mipuy-class')[0].style.display === "table") {
+        toggleMainShow();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'XRAY' && xrayCheck) {
+        toggleMainShow();
+        xrayCheck.remove();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'MEMOGRAPH' && memoCheck) {
+        toggleMainShow();
+        memoCheck.remove();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'PHONES' && phonesCheck) {
+        toggleMainShow();
+        phonesCheck.remove();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'ZIHUY' && zihuyCheck) {
+        toggleMainShow();
+        zihuyCheck.remove();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'SPECIAL' && specialCheck) {
+        toggleMainShow();
+        specialCheck.remove();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'SLA' && slaCheck) {
+        toggleMainShow();
+        slaCheck.remove();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'AGE' && ageCheck) {
+        toggleMainShow();
+        ageCheck.remove();
+        hideMenus();
+        toggleAnswersHide();
+      } else if (button.id === 'US') {
+        hideAll();
+        addDynamicMenuUS();
+      } else if (button.id === 'CT') {
+        hideAll();
+        addDynamicMenuCT();
+      } else if (button.id === 'XRAY') {
+        hideAll();
+        addDynamicMenuXRAY();
+      } else if (button.id === 'MIPUY') {
+        hideAll();
+        addDynamicMenuMIPUY();
+      } else if (button.id === 'MEMOGRAPH') {
+        hideAll();
+        addDynamicMenuMEMOGRAPH();
+      } else if (button.id === "SPECIAL") {
+        hideAll();
+        addDynamicMenuSPECIAL();
+      } else if (button.id === "SLA") {
+        hideAll();
+        addDynamicMenuSLA();
+      } else if (button.id === "AGE") {
+        hideAll();
+        addDynamicMenuAGE();
+      } else if (button.id === "ZIHUY") {
+        hideAll();
+        addDynamicMenuZihuy();
+      } else if (button.id === 'PHONES') {
+        hideAll();
+        addDynamicMenuPHONES();
+      } else {
+        hideAll();
+      }
+    }
+
+    function hideAll() {
+      toggleMainHide();
+      hideMenus();
+      toggleAnswersHide();
+    }
+
+    function onSubButtonClick(button) {
+      if (button.id === 'US1') {
+        addDynamicAnswerUS1();
+      } else if (button.id === 'US2') {
+        addDynamicAnswerUS2();
+      } else if (button.id === 'US3') {
+        addDynamicAnswerUS3();
+      } else if (button.id === 'US4') {
+        addDynamicAnswerUS4();
+      } else if (button.id === 'US5') {
+        addDynamicAnswerUS5();
+      } else if (button.id === 'US6') {
+        addDynamicAnswerUS6();
+      } else if (button.id === 'US7') {
+        addDynamicAnswerUS7();
+      } else if (button.id === 'US8') {
+        addDynamicAnswerUS8();
+      } else if (button.id === 'US9') {
+        addDynamicAnswerUS9();
+      } else if (button.id === 'US10') {
+        addDynamicAnswerUS10();
+      } else if (button.id === 'US11') {
+        addDynamicAnswerUS11();
+      } else if (button.id === 'US12') {
+        addDynamicAnswerUS12();
+      } else if (button.id === 'US13') {
+        addDynamicAnswerUS13();
+      } else if (button.id === 'CT1') {
+        addDynamicAnswerCT1();
+      } else if (button.id === 'CT2') {
+        addDynamicAnswerCT2();
+      } else if (button.id === 'CT3') {
+        addDynamicAnswerCT3();
+      } else if (button.id === 'CT4') {
+        addDynamicAnswerCT4();
+      } else if (button.id === 'CT5') {
+        addDynamicAnswerCT5();
+      } else if (button.id === 'CT6') {
+        addDynamicAnswerCT6();
+      } else if (button.id === 'CT7') {
+        addDynamicAnswerCT7();
+      } else if (button.id === 'CT8') {
+        addDynamicAnswerCT8();
+      } else if (button.id === 'CT9') {
+        addDynamicAnswerCT9();
+      } else if (button.id === 'CT10') {
+        addDynamicAnswerCT10();
+      } else if (button.id === 'CT11') {
+        addDynamicAnswerCT11();
+      } else if (button.id === 'CT12') {
+        addDynamicAnswerCT12();
+      } else if (button.id === 'CT13') {
+        addDynamicAnswerCT13();
+      } else if (button.id === 'CT14') {
+        addDynamicAnswerCT14();
+      } else if (button.id === 'MIPUY1') {
+        addDynamicAnswerMIPUY1();
+      } else if (button.id === 'MIPUY2') {
+        addDynamicAnswerMIPUY2();
+      } else if (button.id === 'MIPUY3') {
+        addDynamicAnswerMIPUY3();
+      } else {
+        hideMenus();
+      }
+    }
+
+    function toggleAnswersShow() {
+      const answersDiv = document.getElementById('answers');
+      const answersContainer = document.getElementsByClassName('answers-container')[0];
+      answersDiv.style.display = 'block';
+      answersContainer.style.display = 'block';
+    }
+
+    function toggleAnswersHide() {
+      const answersDiv = document.getElementById('answers');
+      const answersContainer = document.getElementsByClassName('answers-container')[0];
+      answersDiv.style.display = 'none';
+      answersContainer.style.display = 'none';
+    }
+
+    function toggleMainHide() {
+      const mainDiv = document.getElementsByClassName('main')[0];
+      mainDiv.style.display = 'none';
+    }
+
+    function toggleMainShow() {
+      const mainDiv = document.getElementsByClassName('main')[0];
+      mainDiv.style.display = 'block';
+    }
+
+    function addDynamicMenuUS() {
+      const ulclass = document.getElementsByClassName('us-class')[0];
+      ulclass.style.display = "table";
+    }
+
+    function addDynamicMenuCT() {
+      const ctclass = document.getElementsByClassName('ct-class')[0];
+      ctclass.style.display = "table";
+    }
+
+    function addDynamicMenuMIPUY() {
+      const mipuyclass = document.getElementsByClassName('mipuy-class')[0];
+      mipuyclass.style.display = "table";
+    }
+
+    function addDynamicMenuMEMOGRAPH() {
+      const memographclass = document.getElementsByClassName('memograph-class')[0];
+      memographclass.style.display = "table";
+    }
+
+    function addDynamicMenuPHONES() {
+      const phonesclass = document.getElementsByClassName('phones-class')[0];
+      phonesclass.style.display = "table";
+    }
+
+    function hideMenus() {
+      const ulclass = document.getElementsByClassName('us-class')[0];
+      const ctclass = document.getElementsByClassName('ct-class')[0];
+      const xrayclass = document.getElementsByClassName('xray-class')[0];
+      const mipuyclass = document.getElementsByClassName('mipuy-class')[0];
+      const memographclass = document.getElementsByClassName('memograph-class')[0];
+      const phonesclass = document.getElementsByClassName('phones-class')[0];
+      ulclass.style.display = "none";
+      ctclass.style.display = "none";
+      xrayclass.style.display = "none";
+      mipuyclass.style.display = "none";
+      memographclass.style.display = "none";
+      phonesclass.style.display = "none";
+    }
+
+
+    const menuItems = document.querySelectorAll('.main-menu li');
+    menuItems.forEach(item => {
+      item.addEventListener('click', function () {
+        // Remove background color from all menu items
+        menuItems.forEach(item => {
+          item.classList.remove('clicked');
+        });
+
+        // Add background color to the clicked menu item
+        this.classList.add('clicked');
+      });
+    });
+
+    const submenuItems = document.querySelectorAll('.sub-menu li');
+    submenuItems.forEach(item => {
+      item.addEventListener('click', function () {
+        // Remove background color from all menu items
+        submenuItems.forEach(item => {
+          item.classList.remove('clicked');
+        });
+
+        // Add background color to the clicked menu item
+        this.classList.add('clicked');
+      });
+    });
+
+    function addDynamicMenuXRAY() {
+      const answersHTML = `<div id="xray-answer">
+      שיקוף/רנטגן ושת קיבה ותריסריון (וק"ת) ניתן לבצע בבי"ח רפאל באופן פרטי בלבד לאחר שליחת הפניה בדוא"ל yanad@mar-ltd.com <br>
+      לפני הפנייה למכון חובה לבדוק שעות פעילות וקופה</br>
+        <img src="images/kupa.png">
+        </div>    `;
+      toggleAnswersShow();
+      document.getElementById('dynamicAnswersContainer').innerHTML = answersHTML;
+    }
+
+    function addDynamicMenuZihuy() {
+      const answersHTML = `<div id="zihuy-answer">
+        <b>חובה לבצע זיהוי לקוח לפני קביעת תור או מסירת מידע ללקוח קיים!</b>
+      <table>
+        <tr>
+          <th>רמת זיהוי</th>
+          <th>אמצעי זיהוי</th>
+          <th>פעולות שניתן לבצע</th>
+        </tr>
+        <tr>
+          <td>ודאי</td>
+          <td>
+            מספר טלפון ראשי מעודכן בתיק לקוח<br />
+            מספר טלפון משני מעודכן בתיק לקוח<br />
+            מספר תעודת זהות + 3 שאלות ממאגר שאלות זיהוי<br />
+            מספר טלפון מחייג זהה למספר במסמך הפנייה / התחייבות סרוק בתיק לקוח<br />
+          </td>
+          <td>
+            מסירת מידע (לא כולל ממצאים)<br />
+            שינויים בקביעת תור<br />
+            טיוב נתונים<br />
+            שינוי מספר טלפון<br />
+          </td>
+        </tr>
+        <tr>
+          <td>חלש</td>
+          <td>
+            מספר תעודת זהות +  2 שאלות ממאגר שאלות זיהוי
+          </td>
+          <td>
+            מסירת פרטי תור קיים (רק תאריך ושעת תור, ללא מהות / סוג  הבדיקה)<br />
+            ביטול תור קיים<br />
+            קביעת תור חדש<br />
+          </td>
+        </tr>
+        <tr>
+          <td>לא מזוהה</td>
+          <td>
+            לא קיימים אמצעי זיהוי
+          </td>
+          <td>
+            קביעת תור בלבד ללא שינוי מספר קיים. לציין הערה ביומן לעדכון טלפון במעמד פתיחת התיק<br />
+            מסירת מידע כללי – שאינו אישי<br />
+          </td>
+        </tr>
+        </table>
+    <table>
+      <tr>
+        <th>מאגר שאלות זיהוי:</th>
+      </tr>
+      <tr>
+        <td>1. מה תאריך הלידה של הנבדק (אם מתקשרים בשם מישהו) ? (יום/חודש/שנה)  ?</td>
+      </tr>
+      <tr>
+        <td>2. איזו בדיקה בוצעה בביקור קודם ?</td>
+      </tr>
+      <tr>
+        <td>3. איזו בדיקה נקבעה לביקור עתידי ?</td>
+      </tr>
+      <tr>
+        <td>4. מי הרופא שהפנה לבדיקה ? </td>
+      </tr>
+      <tr>
+        <td>5. באיזה סניף בוצעה הבדיקה ?</td>
+      </tr>
+      <tr>
+        <td>6. מתי הייתה הבדיקה הקודמת (אם לפני מעל לשנה, מותרת סטייה של שנה) ?</td>
+      </tr>
+      <tr>
+        <td>7. כתובת דמוגרפית (אם לא רשומה בתיק ניתן לזהות מהפניה אחרונה) ?</td>
+      </tr>
+      <tr>
+        <th>
+          לקוח ששגה ב-3 שאלות מתוך המאגר ייחשב כלא מזוהה, לא ניתן להמשיך תהליך זיהוי לאחר 3 תשובות שגויות.
+        </th>
+      </tr>
+    </table>
+        </div>    `;
+      toggleAnswersShow();
+      document.getElementById('dynamicAnswersContainer').innerHTML = answersHTML;
+    }
+
+    function addDynamicMenuMEMOGRAPH() {
+      const answersHTML = `<div id="memograph-answer">
+        קביעת תור לבדיקת ממוגרפיה יחד עם US שדיים – יש לתאם בהפרש של 20-40 דק'.<br/><br/>
+        <img src="images/memoseker.png">
+         </div>    `;
+      toggleAnswersShow();
+      document.getElementById('dynamicAnswersContainer').innerHTML = answersHTML;
+    }
+
+    function addDynamicMenuPHONES() {
+      const answersHTML = `<div id="phones-answer">
+        496 - קו בכיר<br>
+        494 - העברה למידע ובירורים<br>
+        922 - אחמ"ש נטו<br>
+        915 - אחמ"ש מאר<br>
+        926 - מנהל מוקד מאר<br>
+        416 - הנחיות מיפוי לב<br>
+        415 - הנחיות מיפוי עצמות<br>         </div>    `;
+      toggleAnswersShow();
+      document.getElementById('dynamicAnswersContainer').innerHTML = answersHTML;
+    }
+
+    function addDynamicMenuSPECIAL() {
+      const answersHTML = `<div id="special-answer">
+        <table>
+        <tr>
+          <th>מחוז</th>
+          <th>סקוליוזיס XR</th>
+          <th>גיל עצמות XR</th>
+          <th>כפות רגליים XR</th>
+          <th>לסת XR/TMJ</th>
+          <th>US סימפוביס / פוביס</th>
+          <th>US אמנדיקס</th>
+          <th>ברך 30-60-90</th>
+        </tr>
+        <tr>
+          <td>צפון</td>
+          <td>
+            רק ביוקנעם
+          </td>
+          <td>
+            בכל הסניפים
+          </td>
+          <td>
+            מבצעים רק בטבעון, נהריה וקריית אתא
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+        </tr>
+        <tr>
+          <td>דרום</td>
+          <td>
+            רק מר"ן
+          </td>
+          <td>
+            בשאר הסניפים מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+        </tr>
+        <tr>
+          <td>מרכז</td>
+          <td>
+            רק במודיעין קופ"ח מאוחדת בלבד
+          </td>
+          <td>
+            לא מבצעים בראשון לציון
+          </td>
+          <td>
+            מבצעים רק ברפאל-ת"א, בת ים, חולון, מודיעין
+          </td>
+          <td>
+            בכל הסניפים לכל קופות החולים, חוץ ממכבי
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+        </tr>
+        <tr>
+          <td>ירושלים</td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            בכל הסניפים
+          </td>
+          <td>
+            רק ברמות
+          </td>
+          <td>
+            בכל הסניפים
+          </td>
+          <td>
+            בכל הסניפים
+          </td>
+          <td>
+            לא מבצעים
+          </td>
+          <td>
+            בכל הסניפים
+          </td>
+        </tr>
+        </table>
+        </div>    `;
+      toggleAnswersShow();
+      document.getElementById('dynamicAnswersContainer').innerHTML = answersHTML;
+    }
+
+    function addDynamicMenuSLA() {
+      const answersHTML = `<div id="sla-answer">
+        <table>
+        <tr>
+          <th>סוג בדיקה</th>
+          <th>זמן פיענוח משוער</th>
+        </tr>
+        <tr>
+          <td>
+            CT
+          </td>
+          <td>
+            תוך 21 ימי עסקים
+          </td>
+        </tr>
+        <tr>
+          <td>
+            רפואה גרעינית
+          </td>
+          <td>
+            תוך 14 ימי עסקים
+          </td>
+        </tr>
+        <tr>
+          <td>
+            הולטר
+          </td>
+          <td>
+            תוך 10 ימי עסקים
+          </td>
+        </tr>
+        <tr>
+          <td>
+            אקו לב
+          </td>
+          <td>
+            תוך 10 ימי עסקים
+          </td>
+        </tr>
+        <tr>
+          <td>
+            US
+          </td>
+          <td>
+            תוך 10 ימי עסקים
+          </td>
+        </tr>
+        <tr>
+          <td>
+            ממוגרפיה (ללא השלמה)
+          </td>
+          <td>
+            תוך 7 ימי עסקים
+          </td>
+        </tr>
+        <tr>
+          <td>
+            רנטגן
+          </td>
+          <td>
+            תוך 24 שעות
+          </td>
+        </tr>
+        <tr>
+          <td>
+            EMG
+          </td>
+          <td>
+            מיידי בסיום הבדיקה
+          </td>
+        </tr>
+        <tr>
+          <td>
+            צפיפות עצם
+          </td>
+          <td>
+            מיידי בסיום הבדיקה
+          </td>
+        </tr>
+        </table>
+        </div>    `;
+      toggleAnswersShow();
+      document.getElementById('dynamicAnswersContainer').innerHTML = answersHTML;
+    }
+
+    function addDynamicMenuAGE() {
+      const answersHTML = `<div id="age-answer">
+        *בכל קביעת תור לילדים עד גיל 18 צריך להוסיף הערה בתור - את גיל הילד וסוג הבדיקה הנדרשת בנוסח: "מוקד: בן/בת 5, US  רקמות רכות צוואר".
+        <table>
+          <tr>
+            <th>בדיקה</th>
+            <th>הגבלת גיל</th>
+          </tr>
+          <tr>
+            <td>
+              רנטגן
+            </td>
+            <td>
+              אין הגבלת גיל ( ילדים מתחת לגיל 18 חובה ליווי הורה , תינוקות עד גיל 3 חובה 2 אנשים שיכנסו לבדיקה)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              US
+            </td>
+            <td>
+              אין הגבלת גיל למעט בבדיקות המיוחדות אך יש לשים לב להנחיות השונות - מבחינת צום למשל
+              בדיקות us מיוחדות לתינוקות וילדים
+            </td>
+          </tr>
+          <tr>
+            <td>
+              פרקי ירכיים ועמוד שדרה
+            </td>
+            <td>
+              שישה  שבועות עד חצי שנה בדיוק. (ראו דגשים לקביעה)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              US מוח
+            </td>
+            <td>
+              מגיל 0 עד שנה לתינוקות- אפשר לבצע אחרי גיל שנה אם המרפס פתוח בלבד אם אין זמינות לפנות לקופה שלהם. (ראו דגשים לקביעה)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              דופלר עורקים / ורידים גפיים
+            </td>
+            <td>
+              מחוז צפון מגיל 10 , שאר המחוזות מגיל 18
+            </td>
+          </tr>
+          <tr>
+            <td>
+              דופלר קרוטיס
+            </td>
+            <td>
+              מגיל 10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CT
+            </td>
+            <td>
+              מגיל 10 (ילדים מתחת לגיל 18 חובה ליווי הורה)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              מיפויים
+            </td>
+            <td>
+              מגיל 10 (ילדים מתחת לגיל 18 חובה ליווי הורה)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              EMG
+            </td>
+            <td>
+              רק מגיל 18
+            </td>
+          </tr>
+          <tr>
+            <td>
+              הולטר לב
+            </td>
+            <td>
+              אין הגבלת גיל (ילדים מתחת לגיל 18 חובה ליווי הורה)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              אקו לב
+            </td>
+            <td>
+              מגיל 16 ומעלה (ילדים מתחת לגיל 18 חובה ליווי הורה)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              צפיפות עצם
+            </td>
+            <td>
+              מבצעים למבוגרים במסגרת סקר (עבור ילדים לבדוק מול קו בכיר)
+            </td>
+          </tr>
+          </table>
+        </div>    `;
+      toggleAnswersShow();
+      document.getElementById('dynamicAnswersContainer').innerHTML = answersHTML;
+    }
+
+
+
+  </script>
+</body>
+
+</html>

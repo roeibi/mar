@@ -1,0 +1,246 @@
+body {
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Set the font for the entire page to Arial */
+  }
+
+
+  .header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: #333; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+    text-align: center; /* Center the content inside the header */
+  }
+
+
+  .logo {
+    width: 0x; /* Set the width of the logo image as needed */
+    margin-bottom: 0; /* Add some space between the logo and buttons */
+  }
+
+div.main-menu {
+    display: block;
+}
+  div.sub-menu {
+    display: block;
+    margin: 10px;
+  }
+  
+  .main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+    width: 100%;
+    margin: auto;
+    display:table;
+  }
+
+  .sub-menu ul {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+    width: 100%;
+    margin: auto;
+    display: none;
+  }
+  
+  .main-menu {
+    display: block;
+  }
+  
+  .main-menu li {
+    margin-bottom: 0; /* Remove spacing between main-menu items */
+    padding: 10px;
+    background-color: #a9a9a9;
+    background: linear-gradient(#838383, #c5c5c5);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.5s, transform 0.2s, box-shadow 0.2s, text-shadow 0.2s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid #7a7a7a;
+    box-sizing: border-box;
+    display:table-cell;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    display: table-cell;
+    padding-bottom: 5px; /* Adjust the value to control the space between the text and the underline */
+  }
+  
+    .main-menu li:hover {
+      background: linear-gradient(45deg, #ff0000, #006aff);
+      text-shadow: 2px 2px 3px rgba(0.3, 0.3, 0.3, 1);
+      transition: background-color 0.5s, transform 0.2s, box-shadow 0.2s, text-shadow 0.2s, color 0.3s;
+    }
+
+    .main-menu li::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px; /* Adjust the height to control the thickness of the underline */
+        background-color: #ff2014; /* Set the color of the underline */
+        opacity: 0; /* Adjust the opacity of the underline */
+        border-radius: 20px; /* Add border-radius to create round edges */
+        /* background: radial-gradient(circle at 50% 0%, #ff0000 0%, #006aff 100%); */
+        transform: scaleX(0); /* Initially, the underline has no width */
+        transform-origin: left; /* Set the origin of the transform to the left */
+        transition: transform 0.0s; /* Add a smooth transition to the underline */
+      }
+      
+      /* Apply the underline effect on hover */
+      .main-menu li:hover::after {
+        transform: scaleX(1); /* Scale the underline to its full width on hover */
+      }
+  
+      
+  
+  .sub-menu li {
+    padding: 10px;
+    background: linear-gradient(#0037ff, #4e74ff);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s, text-shadow 0.2s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    display:table-cell;
+    text-align: center;
+    border: 1px solid #7a7a7a;
+  }
+  
+  .sub-menu li:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff2014, #ff5f5f);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .us-class {
+    display: none;
+  }
+
+  .ct-class {
+    display: none;
+  }
+  
+  .xray-class {
+    display: none;
+  }
+
+  .zihuy-class {
+    display: none;
+  }
+
+  .mipuy-class {
+    display: none;
+  }
+  
+  .memograph-class {
+    display: none;
+  }
+  
+  .phones-class {
+    display: none;
+  }
+
+  .answers-container {
+    display: none;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .answers {
+    display: none;
+    text-align: center;
+    text-decoration: underline;
+   }
+
+   .main-menu li.clicked {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff0000, #006aff);
+  }
+
+  .sub-menu li.clicked {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff2014, #ff5f5f);
+  }
+
+  .main {
+    display: block;
+    text-align: center;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    margin: 20px;
+    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px; /* Rounded corners */
+    background-color: #dfdfdf; /* Light gray background */
+    overflow: hidden; /* Clip content that overflows */
+    border: solid 1px #bdbdbd;
+    float: left;
+  }
+  
+  /* Add rounded corners to the top left and the top right corner of the image */
+  .card img {
+    border-radius: 15px 15px 0 0;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+  }
+  
+  /* Add some padding inside the card container */
+  .card-container {
+    padding: 2px 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card-content {
+    flex-direction: column;
+    text-decoration: none;
+  }
+  
+  .card-container::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
